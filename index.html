@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>JS Assignment 1</title>
+  </head>
+
+  <body>
+    <script>
+      let contacts = [
+        {
+          firstName: "Kushal",
+          lastName: "Neupane",
+          phoneNumber: 123456,
+          hobby: ["music", "football", "travelling"],
+        },
+        {
+          firstName: "Samuel",
+          lastName: "Müller",
+          phoneNumber: 456789,
+          hobby: ["dancing", "volleyball", "singing"],
+        },
+        {
+          firstName: "Nepolina",
+          lastName: "Gautam",
+          phoneNumber: 654321,
+          hobby: ["fitness", "chess", "travelling", "cooking"],
+        },
+
+        {
+          firstName: "Raj",
+          lastName: "Sharma",
+          phoneNumber: 986756567,
+          hobby: ["music", "Tennis", "Movies", "Swimming"],
+        },
+        {
+          firstName: "Sana",
+          lastName: "Thapa",
+          phoneNumber: 246810,
+          hobby: ["dancing", "rogbey", "travelling", "Movies"],
+        },
+      ];
+
+      function findContact(name, prop) {
+        for (let i = 0; i < contacts.length; i++) {
+          if (name == contacts[i].firstName) {
+            if (contacts[i][prop]) {
+              return contacts[i][prop];
+            }
+            return "No property found";
+          }
+        }
+        return "no such contact";
+      }
+      console.log(findContact("Sana", "hobby"));
+    </script>
+  </body>
+</html>
